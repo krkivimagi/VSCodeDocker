@@ -27,14 +27,13 @@ RUN apt-get update && \
 # Clean up any apt cache to reduce image size
 RUN apt-get clean
 
-# Optional: Define environment variables
-ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Expose ports (if necessary, e.g., for web applications)
 EXPOSE 8080
 
-# Set default command for container
-CMD ["bash"]
+# Set default command for container to keep it running
+CMD ["tail", "-f", "/dev/null"]
+
 
 # Command to build image
 # docker build -t vscode-container .

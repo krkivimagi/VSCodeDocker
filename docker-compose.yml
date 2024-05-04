@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  dev:
+    image: vscode-container
+    build: .
+    tty: true               # Allocates a TTY (similar to -it in Docker run)
+    stdin_open: true       # Keeps STDIN open (similar to -it in Docker run)
+    init: true             # Use an init process (similar to --init in Docker run)
+    restart: "no"          # Do not automatically restart the container
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: vscode
+      POSTGRES_PASSWORD: parool
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
