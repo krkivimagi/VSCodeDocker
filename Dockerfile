@@ -44,5 +44,8 @@ CMD ["tail", "-f", "/dev/null"]
 # Command to build docker compose.yml
 # docker compose up
 
+# Command to stop containers
+# docker compose down
+
 # Command to stop docker compose env and remove local image
-# ddocker compose down --rmi local
+# docker compose down --rmi local
