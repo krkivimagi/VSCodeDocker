@@ -35,12 +35,8 @@ EXPOSE 8080
 CMD ["tail", "-f", "/dev/null"]
 
 
-# Command to build image
-# docker build -t vscode-container .
-
-# Command to run the image
-# docker run -it --rm --init vscode-container
-
+# INSTRUCTIONS TO BUILD THE CONTAINERS:
+# Open terminal in the folder where Dockerfile and docker compose.yml are
 # Command to build docker compose.yml
 # docker compose up
 
@@ -54,3 +50,10 @@ CMD ["tail", "-f", "/dev/null"]
 
 # Command to stop docker compose env and remove local image
 # docker compose down --rmi local
+
+# EXTRA: to build only dockerfile (dev env)
+# Command to build image
+# docker build -t vscode-container .
+
+# Command to run the image
+# docker run -it --rm --init vscode-container
