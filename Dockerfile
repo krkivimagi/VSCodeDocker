@@ -44,6 +44,11 @@ CMD ["tail", "-f", "/dev/null"]
 # Command to build docker compose.yml
 # docker compose up
 
+# INSTRUCTIONS:
+# After using compose up in the folder containing docker-compose.yml it will build the containers
+# Then we can open VSCode and make sure it has the extensions: docker; dev containers
+# Then in VSCode, docker Tab, right click on Containers-vscodedocker-vscode-container and attach Visual Studio Code.
+
 # Command to stop containers
 # docker compose down
 
