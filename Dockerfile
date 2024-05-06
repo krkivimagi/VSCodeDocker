@@ -41,4 +41,8 @@ CMD ["tail", "-f", "/dev/null"]
 # Command to run the image
 # docker run -it --rm --init vscode-container
 
+# Command to build docker compose.yml
+# docker compose up
 
+# Command to stop docker compose env and remove local image
+# ddocker compose down --rmi local
